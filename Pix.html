@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.freecodecamp.org/portuguese/news/design-responsivo-para-a-web-como-adaptar-um-site-a-celulares-e-tablets/" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta property="og:image" href="img/Logotipo.png">
+        <meta name="google-site-verification" content="ntIdG-un_OoD4ynUV-PBuX0NrqsRXyJqxqc6BvtpZh4" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" href="css/pix.css">
+        <title>Blue Space</title>
+    </head>
+    
+    <body>
+
+        <header>
+
+            <nav>
+
+                <a class="logo" href="#">Blue Space</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html">Início</a></li> <br><br>
+                    <li><a href="Sobre.html">Sobre</a></li> <br><br>
+                    <li><a href="Receita.html">Receita</a></li> <br><br>
+                    <li><a href="Quem Somos.html">Quem Somos</a></li> <br><br>
+                </ul>
+
+            </nav> <br>
+
+        </header>
+
+        <script src="js/mobile-navbar.js"></script>
+
+        <center>
+        <div id="pix">
+            <img src="img/Pague com Pix.png" alt="Qr Code" id="code">
+
+            <br><br><br>
+
+            <h1>Chave Pix: E-mail</h1> <br>
+            <input type="text" name="texto" id="texto" value="luiz.alfreitas12@gmail.com" readonly>
+            <button onclick="copiarText()"> Copiar </button>
+
+            <script>
+                function copiarText() {
+                    let textCopiado = document.getElementById("texto");
+                    textCopiado.select();
+                    textCopiado.setSelectionRange(0, 99999);
+        
+                    document.execCommand("copy");
+                    alert(`Chave pix copiada com sucesso!`)
+                }
+            </script>
+        </div>
+
+        <br><br><br><br>
+
+        <div id="form">
+            <form action="https://formsubmit.co/luiz.alfreitas12@gmail.com" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="_subject" value="Comprovante de Compra da Blue Space">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="basic">
+                <input type="hidden" name="_next" value="https://www.bluespace.x10.bz/Obrigado1.html">
+
+                <tr>
+                    <div class="title"><td>Seu Nome: </td>
+                    <td><input type="text" name="Nome do pagante" id="Pagante" placeholder="Nome que está no pedido" required></td> </div>
+                </tr> <br><br>
+
+                <p class="title">Faça o upload do comprovante aqui:</p>
+                <div class="max-width">
+                    <div class="imageContainer">
+                        <img src="img/Camera.png" name="Foto" alt="Selecione o comprovante" id="imgPhoto">
+                    </div>
+                </div>
+                <input type="file" id="flImage" name="Comprovante" accept="image/*" required>
+                <br><br>
+                <button type="submit" class="submitform" value="Enviar">Enviar</button>
+                <script src="js/script.js"></script>
+            </form>
+        </div>
+    </body>
+</html>

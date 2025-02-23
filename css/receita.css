@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+/* Para sistema Mobile */
+
+@media (max-width: 640px) {
+    * {
+        width: 100%;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+
+    .logo {
+        font-size: 24px;
+        letter-spacing: 4px;
+        pointer-events: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background: #23232e;
+        width: 100%;
+        height: 8vh;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu div {
+        width: 32px;
+        height: 2px;
+        background: #fff;
+        margin: 8px;
+        transition: 0.3s;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-5px, -7px);
+    }
+
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+        background: rgb(131,0,201);
+        background: linear-gradient(45deg, rgba(131,0,201,1) 0%, rgba(91,0,194,1) 45%, rgba(0,26,255,1) 100%);
+    }
+
+    body {
+        width: 100%;
+        height: auto;
+        zoom: 1;
+        transform: scale(1);
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100%;
+        float: center;
+        text-align: center;
+    }
+
+    header h1 {
+        width: 96%;
+        font-family: 'Dancing Script', cursive;
+        color: #D3D3D3;
+    }
+
+    .titulo {
+        color: #D3D3D3;
+    }
+
+    div {
+        width: 96%;
+        max-height: max-content;
+        color: #A9A9A9;
+    }
+
+    #ingre {
+        font-size: 20px;
+    }
+
+    #aviso h1 {
+        color: red;
+        line-height: 15vh;
+    }
+
+    #aviso h2 {
+        color: #c5c5c5;
+    }
+}
+
+/* Para sistema PC / Computador */
+
+@media (min-width: 640px) {
+    * {
+        width: 100%;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 24px;
+        letter-spacing: 4px;
+        pointer-events: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background: #23232e;
+        width: 100%;
+        height: 8vh;
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-list li {
+        letter-spacing: 3px;
+        margin-left: 32px;
+        text-align: center;
+    }
+
+    .mobile-menu {
+        width: min-content;
+    }
+
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+        background: rgb(131,0,201);
+        background: linear-gradient(45deg, rgba(131,0,201,1) 0%, rgba(91,0,194,1) 45%, rgba(0,26,255,1) 100%);
+    }
+
+    body {
+        width: 100%;
+        height: auto;
+        zoom: 1;
+        transform: scale(1);
+    }
+
+    header {
+        width: 100%;
+    }
+
+    header h1 {
+        width: 96%;
+        font-family: 'Dancing Script', cursive;
+        color: #D3D3D3;
+        font-size: 50px;
+    }
+
+    div {
+        width: 98%;
+        max-height: max-content;
+        color: #A9A9A9;
+    }
+
+    .titulo {
+        color: #D3D3D3;
+    }
+
+    #ingre {
+        font-size: 20px;
+    }
+
+    #aviso h1 {
+        color: red;
+        line-height: 15vh;
+    }
+
+    #aviso h2 {
+        color: #c5c5c5;
+    }
+}
